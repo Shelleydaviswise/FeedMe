@@ -13,5 +13,9 @@ namespace FeedMe.Models
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        //ICollection, IEnumerable, I Queryable
+        public List<FeedMeRecipe> Recipes { get; set; }
+       
     }
 }
