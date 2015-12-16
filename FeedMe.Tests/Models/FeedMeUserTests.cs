@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FeedMe.Models;
+using System.Collections.Generic;
 
 namespace FeedMe.Tests.Models
 {
@@ -27,6 +28,18 @@ namespace FeedMe.Tests.Models
             Assert.AreEqual("Crocker", a_user.LastName);
         }
 
+        [TestMethod]
+        public void FeedMeUserEnsureUserHasRecipes()
+        {
+            List<FeedMeRecipe> recipe_list = new List<FeedMeRecipe>
+            {
+                new FeedMeRecipe { Title = "Chicken Cacciatore" },
+                new FeedMeRecipe { Title = "Succulent Beef Stew" }
+            };
 
+            FeedMeUser a_user = new FeedMeUser { FirstName = "Betty", Recipes = recipe_list };
+            List<FeedMeRecipe> actual_recipes = a_user.Recipes;
+            CollectionAssert.AreEqual(recipe_list, actual_recipes);
+        }
     }
 }
