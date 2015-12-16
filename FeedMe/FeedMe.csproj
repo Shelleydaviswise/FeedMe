@@ -174,10 +174,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\FeedMeContext.cs" />
+    <Compile Include="Models\FeedMeNote.cs" />
+    <Compile Include="Models\FeedMeRepository.cs" />
     <Compile Include="Models\FeedMeUser.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Ingredients.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\Recipe.cs" />
+    <Compile Include="Models\FeedMeRecipe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
