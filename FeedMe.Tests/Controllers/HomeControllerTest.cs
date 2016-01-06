@@ -26,26 +26,26 @@ namespace FeedMe.Tests.Controllers
         }
 
         [TestMethod]
-        public void About()
+        public void Search()
         {
             // Arrange
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.About() as ViewResult;
+            ViewResult result = controller.Search() as ViewResult;
 
             // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            Assert.AreEqual("Search the Edamam API for recipes.", result.ViewBag.Message);
         }
 
         [TestMethod]
-        public void Contact()
+        public void Edit()
         {
             // Arrange
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.Contact() as ViewResult;
+            ViewResult result = controller.Edit() as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);

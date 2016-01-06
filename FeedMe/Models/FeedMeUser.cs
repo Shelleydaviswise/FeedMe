@@ -8,7 +8,7 @@ namespace FeedMe.Models
 {
     public class FeedMeUser
     {
-        [Key] 
+        [Key]
         public int FeedMeUserId { get; set; }
 
         public string FirstName { get; set; }
@@ -16,6 +16,6 @@ namespace FeedMe.Models
 
         //ICollection, IEnumerable, I Queryable
         public List<FeedMeRecipe> Recipes { get; set; }
-       
+
     }
 }

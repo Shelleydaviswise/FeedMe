@@ -31,14 +31,14 @@ namespace FeedMe.Tests.Models
         [TestMethod]
         public void FeedMeUserEnsureUserHasRecipes()
         {
-            List<FeedMeRecipe> recipe_list = new List<FeedMeRecipe>
+            List<Recipe> recipe_list = new List<Recipe>
             {
-                new FeedMeRecipe { Title = "Chicken Cacciatore" },
-                new FeedMeRecipe { Title = "Succulent Beef Stew" }
+                new Recipe { Title = "Chicken Cacciatore" },
+                new Recipe { Title = "Succulent Beef Stew" }
             };
 
             FeedMeUser a_user = new FeedMeUser { FirstName = "Betty", Recipes = recipe_list };
-            List<FeedMeRecipe> actual_recipes = a_user.Recipes;
+            List<Recipe> actual_recipes = a_user.Recipes;
             CollectionAssert.AreEqual(recipe_list, actual_recipes);
         }
     }

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<FeedMe.Models.Recipe>
+
+@{
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="col-lg-12">
+            +-3
+            <div class="recipe">
+                @item.Title
+            </div>
+        </div>
+    </div>
+
+}

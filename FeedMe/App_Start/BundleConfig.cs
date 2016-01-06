@@ -23,9 +23,18 @@ namespace FeedMe
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/Content/myjavascript").Include(
+                       "~/Content/feedmescripts.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/angularjs").Include(
+                      "~/Scripts/angular.js",
+                      "~/Scripts/angular-aria.js",
+                      "~/Scripts/app.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/main.css",
+                      "~/Content/Site.css"));
         }
     }
 }

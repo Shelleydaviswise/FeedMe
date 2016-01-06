@@ -10,14 +10,14 @@ namespace FeedMe.Tests.Models
         [TestMethod]
         public void FeedMeNotesEnsureICanCreateAnInstance()
         {
-            FeedMeNote a_note = new FeedMeNote();
+            RecipeNote a_note = new RecipeNote();
             Assert.IsNotNull(a_note);
         }
 
         [TestMethod]
         public void FeedMeRecipeEnsureNoteHasAllProperties()
         {
-            FeedMeNote a_note = new FeedMeNote();
+            RecipeNote a_note = new RecipeNote();
 
             DateTime when_saved = DateTime.Now;
             a_note.RecipeId = 1;

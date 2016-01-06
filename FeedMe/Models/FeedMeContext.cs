@@ -10,6 +10,6 @@ namespace FeedMe.Models
     public class FeedMeContext : DbContext
     {
         public virtual DbSet<FeedMeRecipe> Recipes { get; set; }
-        public  virtual DbSet<Ingredients> Ingredients { get; set; }
+        public virtual DbSet<Ingredients> Ingredients { get; set; }
     }
 }

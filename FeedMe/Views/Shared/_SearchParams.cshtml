@@ -1,0 +1,53 @@
+﻿<div class="search-params" ng-app="feedme" ng-controller="SearchController">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Search by Food type</h2>
+            <p>Enter your search term, i.e. "Chicken"</p>
+            <input type="text" ng-model="searchterm" name="search term" />
+        </div>
+    </div>
+    <div class="row" >
+       <div class="col-md-12">
+            <h2>Search By Dietary Needs</h2>
+            <p>  Select a dietary restriction from the drop-down menu. </p>
+            <select name = "dietSelectMenu" ngModel ="dietSelect" placeholder="Select Diet">
+                <option value= null></option>
+                <option value="balanced">Balanced</option>
+                <option value="high-protein">High Protein</option>
+                <option value="high-fiber">High Fiber</option>
+                <option value="low-fat">Low Fat</option>
+                <option value="low-carb">Low Carb</option>
+                <option value="low-sodium">Low Sodium</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Search By Health Needs</h2>
+            <p>  Select a health restriction from the drop-down menu. </p>
+            <select name="healthSelectMenu" ngModel="healthSelect" placeholder ="Select Health">
+                <option value=null></option>
+                <option value="vegan">Vegan</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="paleo">Paleo</option>
+                <option value="dairy-free">Dairy-Free</option>
+                <option value="gluten-free">Gluten-Free</option>
+                <option value="wheat-free">Wheat-Free</option>
+                <option value="fat-free">Fat-Free</option>
+                <option value="low-sugar">Low-Sugar</option>
+                <option value="egg-free">Egg-Free</option>
+                <option value="peanut-free">Peanut-Free</option>
+                <option value="tree-nut-free">Tree-Nut-Free</option>
+                <option value="soy-free">Soy-Free</option>
+                <option value="fish-free">Fish-Free</option>
+                <option value="shellfish-free">Shellfish-Free</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Search</h2>
+            <p><a class="btn btn-default" onclick ="fetch()">Search &raquo;</a></p>
+        </div>
+    </div>
+</div>
