@@ -11,7 +11,7 @@ namespace FeedMe.Tests.Models
         [TestMethod]
         public void FeedMeIngredientsEnsureICanCreateAnInstance()
         {
-            RecipeIngredients the_ingredients = new RecipeIngredients();
+            IngredientLines the_ingredients = new IngredientLines();
             Assert.IsNotNull(the_ingredients);
 
         }
@@ -19,7 +19,7 @@ namespace FeedMe.Tests.Models
         [TestMethod]
         public void FeedMeIngredientsEnsureItHasAllTheProperties()
         {
-            RecipeIngredients the_ingredients = new RecipeIngredients();
+            IngredientLines the_ingredients = new IngredientLines();
 
             the_ingredients.Quantity = 2;
             the_ingredients.Measure = "lbs";

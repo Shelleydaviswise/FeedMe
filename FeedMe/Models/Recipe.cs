@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FeedMe.Models
 {
-    public class FeedMeRecipe : IComparable
+    public class Recipe : IComparable
     {
         public object DateSaved { get; set; }
 
@@ -15,20 +15,29 @@ namespace FeedMe.Models
         [Key]
         public int RecipeId { get; set; }
         public string Image { get; set; }
-        public List<Ingredients> Ingredients { get; set; }
-        public string Notes { get; set; }
-        public string Summary { get; set; }
-        public string Yield { get; set; }
-        public string DietLabels { get; set; }
-        public string HealthLabels { get; set; }
+        public List<IngredientLines> Ingredients { get; set; }
+        public string URL { get; set; }
 
+        //[DataType(DataType.Date)]
+        //[DisplayFormat(DataFormatString = "{0: yyyy-MM-dd)", ApplyFormatInEditMode = true)]
+        //public DateTime RecipeSaveDate { get; set; }
+
+        public string Summary { get; set; }
+        public int Yield { get; set; }
+
+        [Display(Name ="Diet Labels" )]
+        public string DietLabels { get; set; }
+
+        [Display(Name = "Health Labels")]
+        public string HealthLabels { get; set; }
+        //public string Notes { get; set; }
 
         public int CompareTo(object obj)
         {
             //Sorting on the Recipe Title
 
             // We need to explicitly cast from object type to Recipe Type
-            FeedMeRecipe other_recipe = obj as FeedMeRecipe;
+            Recipe other_recipe = obj as Recipe;
             int response = this.Title.CompareTo(other_recipe.Title);
             return response;
         }

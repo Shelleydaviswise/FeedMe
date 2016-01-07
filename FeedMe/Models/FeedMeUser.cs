@@ -10,12 +10,11 @@ namespace FeedMe.Models
     {
         [Key]
         public int FeedMeUserId { get; set; }
-
+        public virtual ApplicationUser RealUser { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
         //ICollection, IEnumerable, I Queryable
-        public List<FeedMeRecipe> Recipes { get; set; }
+        public List<Recipe> Recipes { get; set; }
 
     }
 }

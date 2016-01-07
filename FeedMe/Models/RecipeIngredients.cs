@@ -5,7 +5,7 @@ using System.Web;
 
 namespace FeedMe.Models
 {
-    public class Ingredients
+    public class IngredientLines
     {
         public string Food { get; set; }
         public string Measure { get; set; }

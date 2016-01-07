@@ -23,7 +23,7 @@ namespace FeedMe.Tests.Models
             DateTime when_saved = DateTime.Now;
             a_recipe.RecipeId = 1;
             a_recipe.Image= "https://google.com";
-            a_recipe.Yield = "Four Servings";
+            a_recipe.Yield = 4;
             a_recipe.Summary = "A light meal great for entertaining.";
             a_recipe.DateSaved = when_saved;
             a_recipe.Title = "Chicken Cacciatore";
@@ -34,7 +34,7 @@ namespace FeedMe.Tests.Models
 
             Assert.AreEqual(1, a_recipe.RecipeId);
             Assert.AreEqual("https://google.com", a_recipe.Image);
-            Assert.AreEqual("Four Servings", a_recipe.Yield);
+            Assert.AreEqual(4, a_recipe.Yield);
             Assert.AreEqual("A light meal great for entertaining.", a_recipe.Summary);
             Assert.AreEqual(when_saved, a_recipe.DateSaved);
             Assert.AreEqual("Chicken Cacciatore", a_recipe.Title);
@@ -47,15 +47,15 @@ namespace FeedMe.Tests.Models
         [TestMethod]
         public void FeedMeRecipesEnsureRecipeHasIngredients()
         {
-            List<RecipeIngredients> ingredients_list = new List<RecipeIngredients>
+            List<IngredientLines> ingredients_list = new List<IngredientLines>
             {
-                new RecipeIngredients { Food = "chicken" },
-                new RecipeIngredients {Food = "tomatoes" }
+                new IngredientLines { Food = "chicken" },
+                new IngredientLines {Food = "tomatoes" }
             };
 
             Recipe a_recipe = new Recipe { Title = "Chicken Cacciatore", Ingredients = ingredients_list };
 
-            List<RecipeIngredients> actual_ingredients = a_recipe.Ingredients;
+            List<IngredientLines> actual_ingredients = a_recipe.Ingredients;
             CollectionAssert.AreEqual(ingredients_list, actual_ingredients);
 
         }

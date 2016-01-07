@@ -20,7 +20,7 @@ namespace FeedMe.Migrations
                 {
                 RecipeId = 1,
                 Image = "https://google.com",
-                Yield = "Four Servings",
+                Yield = 4,
                 Summary = "A light meal great for entertaining.",
                 DateSaved = DateTime.Now,
                 Title = "Chicken Cacciatore",
